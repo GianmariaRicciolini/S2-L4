@@ -179,8 +179,24 @@ console.log(upperFirst("almeno tre parole"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function cutString(str) {
+  return str.substring(1, str.length - 1);
+}
+
+console.log(cutString("Epicode!"));
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function giveMeRandom(n) {
+  const arr = [];
+
+  for (let i = 0; i < n; i++) {
+    const randNum = Math.floor(Math.random() * 11);
+    console.log("randNum", randNum);
+    arr.push(randNum);
+  }
+  return arr;
+}
